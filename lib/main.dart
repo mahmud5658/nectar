@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectar/app.dart';
+import 'package:device_preview/device_preview.dart';
 
 void main() {
-  runApp(const MainApp());
-}
-
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+  runApp(
+    DevicePreview(
+      enabled: true, // Disable on release mode
+      builder: (context) => ScreenUtilInit(
+        designSize: Size(360, 690),
+        minTextAdapt: true,
+        splitScreenMode: true,
+            useInheritedMediaQuery: true,
+      rebuildFactor: (old, data) => true,
+        builder: (context, child) => Nectar(),
       ),
-    );
-  }
+    ),
+  );
 }
