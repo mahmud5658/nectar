@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:nectar/app/route/app_pages.dart';
-
 class SplashController extends GetxController {
   @override
   void onInit() async {
