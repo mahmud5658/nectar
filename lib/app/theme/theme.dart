@@ -6,7 +6,7 @@ ThemeData theme = ThemeData(
     useMaterial3: true,
     primaryColor: AppColors.primaryColor,
     colorScheme: const ColorScheme.light(
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
         surface: AppColors.surfaceColor,
         onSurface: AppColors.onSurfaceColor,
         primary: AppColors.primaryColor,
@@ -21,4 +21,16 @@ ThemeData theme = ThemeData(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.r)),
           overlayColor: Colors.transparent),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15.r),
+          borderSide: BorderSide(color: AppColors.primaryColor)),
+      enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15.r),
+          borderSide: BorderSide(color: AppColors.primaryColor)),
+      focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15.r),
+          borderSide: BorderSide(color: AppColors.primaryColor)),
     ));

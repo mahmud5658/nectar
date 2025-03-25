@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:nectar/app/constants/app_assets.dart';
+import 'package:nectar/app/route/app_pages.dart';
 import 'package:nectar/widgets/svg_image.dart';
 
 class WelcomeView extends StatelessWidget {
@@ -48,7 +51,7 @@ class WelcomeView extends StatelessWidget {
                     height: 20.h,
                   ),
                   ElevatedButton(
-                      onPressed: () {},
+                      onPressed: ()=> Get.offAllNamed(Routes.LOGIN),
                       child: Text('Get started'))
                 ],
               ),
