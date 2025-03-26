@@ -8,6 +8,7 @@ class AppAssets {
   // images
   static const String _imageBasePath = "assets/images";
   static const String background = "$_imageBasePath/background.png";
-   static const String banner = "$_imageBasePath/banner.png";
+  static const String banner = "$_imageBasePath/banner.png";
+  static const String productImg = "$_imageBasePath/product.png";
 }
 

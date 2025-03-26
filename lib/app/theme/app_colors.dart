@@ -7,4 +7,8 @@ class AppColors {
 
   // light swatch
   static const Color primaryColor = Color(0xFF53B175);
+
+  // text color
+  static const Color textWhite = Color(0xFFFFFFFF);
+  static const Color textGrey = Color(0xffC4BCB6);
 }

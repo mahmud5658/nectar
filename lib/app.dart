@@ -10,7 +10,7 @@ class Nectar extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.SPLASH,
+      initialRoute: Routes.SHOP,
       getPages: AppPages.routes,
       theme: theme,
       themeMode: ThemeMode.light,

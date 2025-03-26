@@ -5,7 +5,7 @@ import 'package:nectar/app.dart';
 void main() {
   runApp(
     DevicePreview(
-      enabled: true, // Disable on release mode
+      enabled: true,
       builder: (context) => ScreenUtilInit(
         designSize: Size(360, 690),
         minTextAdapt: true,

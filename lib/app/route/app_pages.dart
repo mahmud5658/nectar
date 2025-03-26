@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:get/get.dart';
 import 'package:nectar/modules/auth/bindings/login_binding.dart';
 import 'package:nectar/modules/auth/views/login_view.dart';
