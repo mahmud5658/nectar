@@ -11,71 +11,72 @@ class ShopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(left: 15, right: 15),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 40.h,
-            ),
-            SvgImage(
-              img: AppAssets.carrotRed,
-              height: 30,
-              width: 30,
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.location_on),
-                Text(
-                  'Savar,Dhaka',
-                  style: TextStyle(fontSize: 5.sp, fontWeight: FontWeight.w500),
-                )
-              ],
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-            CustomSearchField(),
-            SizedBox(
-              height: 20.h,
-            ),
-            _bannerSlider(),
-            SizedBox(
-              height: 20.h,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Exclusive Offer',
-                  style: TextStyle(fontSize: 5.sp, fontWeight: FontWeight.w800),
-                ),
-                TextButton(onPressed: () {}, child: Text('See All'))
-              ],
-            ),
-            SizedBox(
-              height: 200,
-              child: ListView.separated(
-                scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      height: 100.h,
-                      width: 70.w,
-                      decoration: BoxDecoration(
-                        color: Colors.amber
-                      ),
-                    );
-                  },
-                  separatorBuilder: (context, index) => SizedBox(
-                        height: 10,
-                      ),
-                  itemCount: 10),
-            )
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 15, right: 15),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 40.h,
+              ),
+              SvgImage(
+                img: AppAssets.carrotRed,
+                height: 30,
+                width: 30,
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.location_on),
+                  Text(
+                    'Savar,Dhaka',
+                    style: TextStyle(fontSize: 5.sp, fontWeight: FontWeight.w500),
+                  )
+                ],
+              ),
+              SizedBox(
+                 height: 20.h,
+              ),
+              CustomSearchField(),
+              SizedBox(
+                height: 20.h,
+              ),
+              _bannerSlider(),
+              SizedBox(
+                height: 20.h,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Exclusive Offer',
+                    style: TextStyle(fontSize: 5.sp, fontWeight: FontWeight.w800),
+                  ),
+                  TextButton(onPressed: () {}, child: Text('See All'))
+                ],
+              ),
+              SizedBox(
+                height: 150,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        width: 50.w,
+                        decoration: BoxDecoration(
+                          color: Colors.amber
+                        ),
+                        child: Text("$index"),
+                      );
+                    },
+                    
+                    itemCount: 100),
+              )
+            ],
+          ),
         ),
       ),
     );

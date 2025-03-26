@@ -10,30 +10,35 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
+    final theme = Theme.of(context);
     Get.put(SplashController(), permanent: true);
+
     return Scaffold(
-      backgroundColor: theme.primaryColor,
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Spacer(),
-            Center(
-              child: SvgImage(
-                img: AppAssets.appLogo,
-                width: 75.w,
-                height: 75.h,
-              ),
-            ),
-            const Spacer(),
-            const CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-            ),
-            SizedBox(height: 30.h),
-          ],
-        ),
+      backgroundColor: theme.colorScheme.primary,
+      body: Column(
+        children: [
+          const Spacer(),
+          _buildLogo(),
+          const Spacer(),
+          _buildLoadingIndicator(),
+        ],
       ),
+    );
+  }
+
+  Widget _buildLogo() {
+    return Center(
+      child: SvgImage(
+        img: AppAssets.appLogo,
+        width: 70.w,
+        height: 70.h,
+      ),
+    );
+  }
+  Widget _buildLoadingIndicator() {
+    return Padding(
+      padding: EdgeInsets.only(bottom: 40.h),
+      child: const CircularProgressIndicator(),
     );
   }
 }

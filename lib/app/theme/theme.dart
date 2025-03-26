@@ -33,4 +33,8 @@ ThemeData theme = ThemeData(
       focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15.r),
           borderSide: BorderSide(color: AppColors.primaryColor)),
-    ));
+    ),
+    progressIndicatorTheme: ProgressIndicatorThemeData(
+      color: Colors.white,
+    )
+    );
